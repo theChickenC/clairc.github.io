@@ -11,7 +11,10 @@ url: "https://clairc.com" # the base hostname & protocol for your site
 plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
-  - jekyll-remote-theme
+  # - jekyll-remote-theme
+  
+# remote_theme: pages‑themes/minimal@v0.2.0
+theme: jekyll-theme-minimal
 
 # SEO settings
 title: Clair Cheng's Notes
@@ -61,4 +64,4 @@ collections:
 
 # Build settings
 markdown: kramdown
-# theme: jekyll-theme-minimal
+
