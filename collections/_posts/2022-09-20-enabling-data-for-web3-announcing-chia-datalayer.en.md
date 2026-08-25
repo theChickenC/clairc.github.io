@@ -48,7 +48,7 @@ Each participant in the Climate Warehouse publishes data in their DataLayer tabl
 The World Bank’s mission required blockchain technology for immutability and transparency. Adding another layer of complexity, the blockchain must also be sustainable, support their needs for storing data, and capable of running with minimal technical specifications. Chia is the only blockchain that met their requirements. The final simulation leveraging the Chia Blockchain has finished; [more information on the project can be found here](https://www.theclimatewarehouse.org) and access to a [read-only "observer" node is available here](https://app.climatewarehouse.chia.net/#/projects?orgUid=all).
 
 ## Expanding Blockchain Capabilities through Chia DataLayer
-We approached the opportunity space as a blue sky, understanding that blockchain technology and Web3 are still so new that many of the use cases haven’t yet been developed. That said, we built it with applicability and usability with today’s use cases and technology.
+We  the opportunity space as a blue sky, understanding that blockchain technology and Web3 are still so new that many of the use cases haven’t yet been developed. That said, we built it with applicability and usability with today’s use cases and technology.
 
 This isn’t another case of sprinkle blockchain on the problem - blockchain technology drives the key differentiation. A ledger with private write and public read access, with all transactions recorded on-chain creates total and novel transparency. Where we have for so long relied on trusting each organization in a federated database (Read: any industry-wide tracking of a product or process), we now have process controls and blockchain-enforced integrity.
 
@@ -78,7 +78,7 @@ Included in this release of Chia DataLayer:
 **Proof Of Inclusion**: The Chia DataLayer singleton can be spent by its owner in a way that cryptographically proves the inclusion of a particular row (or multiple rows), specified by the hash of the data in that row. Proofs of inclusion are the basis for accessing DataLayer data from Chialisp because once the data is proven, it can be used to drive other functionality, starting with the two-party commit, and moving beyond to include oracles and off-chain contracts.
 
 **Two-Party Commit**: Using DataLayer offer files and proofs of inclusion, two people can coordinate a simultaneous (“atomic”) update of their respective data:
-* Alice proposes an update, creating an offer file that includes proofs of inclusion of the added and changed rows she proposes to make in her own DataLayer tables and the rows she requests that Bob add or change in his tables.
+* Alice proposes an update, creating an offer file that includes proofs of inclusion of the added and changed rows she proposes to make in her own DataLayer tables and therows she requests that Bob add or change in his tables.
 * She saves the offer file and sends it to Bob.
 * Bob opens the offer file and reviews the proposed changes to Alice’s DataLayer tables and the changes she requests of his DataLayer tables.
 * If the changes are acceptable, Bob attaches an update to his DataLayer tables that includes at least the changes requested by Alice, and submits the completed offer to the blockchain.
@@ -88,6 +88,6 @@ Demonstrated through the lens of our previous example, the two-party commit feat
 
 We will be providing further context on the features above, as well as details on our planned expansion to Chia Datalayer functionality in a follow-up post. 
 
-Releasing the Chia DataLayer into your hands is an exciting moment for us, made even more exciting by the prospect of seeing your entirely novel and imaginative use cases with the technology. We’re looking forward to the future you build! 
+Releasing the Chia DataLayer into your hands is an exciting moment for us, made even more exciting by the prospect of seeing your entirely novel and imaginative use cases with the technology. We’re looking forward to the future you build!  
 
 <p style="text-align: center;"><a class="button primary-button" href="/download" target="_blank">Download 1.6.0</a></p>

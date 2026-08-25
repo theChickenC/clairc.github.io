@@ -24,13 +24,9 @@ facebook:
 logo: /img/chia_logo.svg
 social:
   links:
-    - https://twitter.com/chia_project
-    - https://www.facebook.com/ChiaProject
-    - https://instagram.com/chia_project
     - https://www.linkedin.com/company/chia-network/
     - https://github.com/Chia-Network
-    - https://medium.com/@chia.net
-    - https://keybase.io/team/chia_network.public
+    - https://youtube.com
 google_analytics_snippet: |
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157739092-1"></script>
