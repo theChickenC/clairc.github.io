@@ -12,6 +12,7 @@ To set up your environment and run the server locally:
 gem install bundler
 git clone --depth 1 https://github.com/Chia-Network/chia-network.github.io.git
 cd chia-network.github.io
+bundle config set force_ruby_platform true
 bundle install
 bundle exec jekyll serve
 ```
