@@ -50,7 +50,7 @@ en: # English
   download_centosfedora_button: "CentOS/Redhat"
   download_wsl2_button: "Install WSL2"
   download_amzlinux_button: "Install Amazon Linux"
-  about_title: "About Us"
+  about_title: "More About Me"
   about_description: |
     Chia Network is building a better blockchain and smart transaction platform which is more secure, more sustainable, and more powerful.
 
@@ -72,7 +72,7 @@ en: # English
     Many on the Chia team are located in the SF Bay Area but remote is fine as we have people all over the world - Keybase, GitHub, and Zoom are how we work. Geographic restrictions, if any, will be noted in a job specification.
 
     Please send your resume and cover letter to <a href="mailto:jobs@chia.net" target="_blank">jobs@chia.net</a>. Please put the role you are applying for as part of the subject line and include anything additionally required by a specific job posting.
-  blog_title: "Notes from Chia"
+  blog_title: "Clair's Ideas"
   download_title: "Release Notes"
   download_loading_message: "Loading releases..."
   green_paper_main_title: "Chia's Green Paper"
