@@ -5,11 +5,10 @@
 
 .site-footer {
     background-color: $chia-green;
-    background-image: url(/img/bg/tiling-abstract-shapes.png);
     background-position: -(rem(342)) 0;
     background-repeat: no-repeat;
     color: $white;
-    padding: rem(36) 3.125%;
+    padding: rem(30) 3.125%;
     a, a:visited {
         color: $white;
         &:hover, &:active {
@@ -18,7 +17,7 @@
     }
     @include breakpoint(460) {
         background-position: -(rem(257)) 0;
-        padding: rem(60) 3.125%;
+        padding: rem(45) 3.125%;
     }
     @include breakpoint(900) {
         background-position: -(rem(171)) 0;
