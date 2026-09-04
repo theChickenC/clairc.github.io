@@ -18,7 +18,9 @@
 # Team Member
 --------------------------------------------------------------*/
 
-.team-member {
+.likes {
+    text-align: center;
+    
     img {
         border-radius: rem(8);
         margin-bottom: rem(8);
@@ -26,12 +28,12 @@
     span {
         display: block;
     }
-    .team-name {
+    .like-name {
         @include typeset($body-font-size, 24);
         font-weight: 700;
         margin-bottom: rem(4);
     }
-    .team-title {
+    .like-desc {
         @include typeset($small-font-size, 21);
         color: rgba($text-color, 0.5);
     }
