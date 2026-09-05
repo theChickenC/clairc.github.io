@@ -37,6 +37,11 @@
     width: rem(100);
 }
 
+.site-logo img { 
+    height: 90px; width: auto; 
+}
+
+
 .main-menu-links {
     @include typeset($responsive-body-font-size, 21);
     @include reset-list;
