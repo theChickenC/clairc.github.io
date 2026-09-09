@@ -22,6 +22,9 @@
     text-align: center;
     
     img {
+        width: 100%;  //I used doubao bc i wanted all images to be the same size
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
         border-radius: rem(8);
         margin-bottom: rem(8);
     }
