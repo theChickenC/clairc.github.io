@@ -45,8 +45,6 @@ defaults:
 
 collections_dir: collections
 collections:
-  news:
-    output: false
   investor_pics:
     output: false
   faq:
