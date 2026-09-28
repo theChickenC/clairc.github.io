@@ -1,21 +1,19 @@
 ---
 lang: en
 layout: post
-title:  "Dream"
+title:  "Ethereal Planet in Outer Space"
 date:   2026-5-21
 author: "[Clair C.](https://www.clairc.com/)"
 ---
 
-<p align="center"><img src="/assets/blog/26_5_21.jpg" alt="Chia Blockchain datalayer graphic" width="300px"></p>
-
 ## World Building
-
 * "molters" are teleported into another dimension, full of rocks, no greenery, and they have to search for a specific gemstone to climb, 300 m tall, takes at least a full day to climb.
 * there's various power ups that you can use, 0g boots, lasso, etc
 * only one person can utilize the core on the gemstone: whoever gets there the fastest, but each designated zone in the home planet has "molters" to climb up and reach it.
 * looking at the gemstone for too long will stun you bc it's supposedly the most enchanting obj you've ever seen (rainbow glimmering)
 * as a molter, not only are you surviving against traps on the gemstone, but also other people trying to beat you
 
+<p align="center"><img src="/assets/blog/26_5_21.jpg" alt="Chia Blockchain datalayer graphic" width="300px"></p>
 
 ## Possible Plot #1
 
