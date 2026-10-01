@@ -25,6 +25,6 @@ author: "[Clair C.](https://www.clairc.com/)"
 * there is a very normal looking rock that holds the answer, not these bright ones that are just distractors
 
 
-## Inspiration
+<!-- ## Inspiration
 
-<p style="text-align: center;"><a class="button primary-button" href="/download" target="_blank">The Darkness - Build By Titan</a></p>
+<p style="text-align: center;"><a class="button primary-button" href="/download" target="_blank">The Darkness - Build By Titan</a></p> -->
