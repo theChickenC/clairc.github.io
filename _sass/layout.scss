@@ -154,12 +154,30 @@
 	}
 }
 
+// .featured-content-img {
+// 	display: none;
+// 	@include breakpoint(768) {
+// 		display: block;
+// 		width: $col-4-width / $col-10-width * 100%;
+// 	}
+// }
+
 .featured-content-img {
-	display: none;
+	display: flex;
+    justify-content: center;   // horizontal center
+    align-items: center;
+    @include breakpoint(768) {
+        width: $col-4-width / $col-10-width * 100%;
+    }
+}
+
+.featured-content-img img {
+    display: block;
+    max-width: 80%;
 	@include breakpoint(768) {
-		display: block;
-		width: $col-4-width / $col-10-width * 100%;
-	}
+        max-width: 100%;
+    }
+    height: auto;
 }
 
 /*--------------------------------------------------------------
