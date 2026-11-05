@@ -7,177 +7,191 @@ layout: default
 
 {% include navigation.html active="download" %}
 
+<style>
+/* Screenshot placeholders — replace each .digihand-shot div with an <img> of your own. */
+.digihand-shot {
+    border: 2px dashed #b9b9b9;
+    border-radius: 6px;
+    background: #fafafa;
+    padding: 28px 20px;
+    margin: 22px 0;
+    text-align: center;
+    color: #666;
+    line-height: 1.5;
+}
+.digihand-shot strong { color: #333; }
+.digihand-shot .shot-figure { font-size: 0.85em; color: #999; }
+.digihand-keys { border-collapse: collapse; }
+.digihand-keys td, .digihand-keys th { border: 1px solid #ddd; padding: 6px 12px; text-align: left; }
+.digihand-keys code { background: #f2f2f2; padding: 1px 6px; border-radius: 4px; }
+</style>
+
 <div class="pg-title">
     <div class="col-10-container">
-        <h1>Download</h1>
+        <h1>DigiHand</h1>
     </div>
 </div>
 
 <div class="white-bg content-padding">
     <div class="col-6-container">
-        <h3>This page is the only official source for Chia client installer downloads. Do not trust downloads from other sources.</h3>
+        <h3>AI-powered handwriting digitization platform, written in Python.</h3>
         <p>
-            The Chia client can be used as either a <span class="admonition-note">light wallet</span> or a <span class="admonition-note">full node + farmer</span>.
+           DigiHand is an innovative handwriting digitization platform that is powerful and easy to use, converting scanned PDFs of handwriting into digital text. After selecting a model, utilize its intuitive side-by-side editor to adjust raw output.
         </p>
         <p>
-            Don't know where to begin? Check out our <a href="https://github.com/Chia-Network/chia-blockchain/wiki/Beginners-Guide">Beginner's Guide</a> on the <a href="https://github.com/Chia-Network/chia-blockchain/wiki">Wiki</a>. Detailed <a href="https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL" target="_blank">Installation instructions</a> and <a href="https://github.com/Chia-Network/chia-blockchain" target="_blank">source code</a> can be found on Github.
+            <a href="https://github.com/theChickenC/DigiHand" target="_blank" rel="noreferrer noopener" class="button full-width-button">Download DigiHand for Windows<img src="/img/ui-icons/download-white.svg" class="chia-icon ui-icon baseline-icon"></a>
         </p>
-        <p><span class="admonition-note">Note: Windows installer does NOT support Windows 7!</span></p>
     </div>
 </div>
 
-<div class="white-bg content-padding download-options">
+<div class="white-bg content-padding">
     <div class="col-8-container">
-        
-        <!-- Windows download -->
-        <div class="download-option">
-            <div class="download-option-details download-option-button">
-                <a href="https://download.chia.net/latest/Setup-Win64.exe" target="_blank" rel="noreferrer noopener" class="button full-width-button">{{ strings.download_windows_button }} <img src="/img/ui-icons/download-white.svg" class="chia-icon ui-icon baseline-icon"></a>
-            </div>
-            <div class="download-option-details download-option-ver">
-                <h6>Version {{ site.data.checksums.current_version }} | 64 bit</h6>
-                <span class="chia-cta">Alternative Download: <a href="https://download.chia.net/latest/Setup-Win64.exe.torrent">Torrent <img src="/img/ui-icons/download.svg" class="chia-icon ui-icon baseline-icon"></a></span>
-                <p><em>No Windows 7 support</em></p>
-            </div>
-            <div class="download-option-details download-option-check">
-                <h6>SHA256 checksum:</h6>
-                <span><code>{{ site.data.checksums.windows_checksum }}</code></span>
-            </div>
-        </div>
-        
-        <!-- macOS M1 download -->
-        <div class="download-option">
-            <div class="download-option-details download-option-button">
-                <a href="https://download.chia.net/latest/Setup-MacOS-arm64.dmg" target="_blank" rel="noreferrer noopener" class="button full-width-button">{{ strings.download_macosm1_button }} <img src="/img/ui-icons/download-white.svg" class="chia-icon ui-icon baseline-icon"></a>
-            </div>
-            <div class="download-option-details download-option-ver">
-                <h6>Version {{ site.data.checksums.current_version }} | 64 bit</h6>
-                <span class="chia-cta">Alternative Download: <a href="https://download.chia.net/latest/Setup-MacOS-arm64.dmg.torrent">Torrent <img src="/img/ui-icons/download.svg" class="chia-icon ui-icon baseline-icon"></a></span>
-            </div>
-            <div class="download-option-details download-option-check">
-                <h6>SHA256 checksum:</h6>
-                <span><code>{{ site.data.checksums.macos_arm_checksum }}</code></span>
-            </div>
-        </div>
-        
-        <!-- macOS Intel Current -->
-        <div class="download-option">
-            <div class="download-option-details download-option-button">
-                <a href="https://download.chia.net/latest/Setup-MacOS.dmg" target="_blank" rel="noreferrer noopener" class="button full-width-button">{{ strings.download_macosintel_button }} <img src="/img/ui-icons/download-white.svg" class="chia-icon ui-icon baseline-icon"></a>
-                <br  />
-                <p><em>Mojave 10.14 and later</em></p>
-            </div>
-            <div class="download-option-details download-option-ver">
-                <h6>Version {{ site.data.checksums.current_version }} | 64 bit</h6>
-                <span class="chia-cta">Alternative Download: <a href="https://download.chia.net/latest/Setup-MacOS.dmg.torrent">Torrent <img src="/img/ui-icons/download.svg" class="chia-icon ui-icon baseline-icon"></a></span>
-            </div>
-            <div class="download-option-details download-option-check">
-                <h6>SHA256 checksum:</h6>
-                <span><code>{{ site.data.checksums.macos_intel_checksum }}</code></span>
-            </div>
-        </div>
+        <h2>The DigiHand window</h2>
+        <ul>
+            <li><strong>Toolbars</strong> — <em>File</em> (open PDF, save page, projects) and <em>Tools</em> (model picker, start page, Solve, ePub).</li>
+            <li><strong>Left pane: PDF viewer</strong> — your scanned source, with its own toolbar for page navigation, zoom, and rotation.</li>
+            <li><strong>Right pane: Text Editor</strong> — the recognized text for the current page, with a toolbar for font, size, and bold/italic/underline.</li>
+        </ul>
 
-        <!-- Debian download -->
-        <div class="download-option">
-            <div class="download-option-details download-option-button">
-                <a href="https://download.chia.net/latest/x86_64-Ubuntu-gui" target="_blank" rel="noreferrer noopener" class="button full-width-button">{{ strings.download_debian_button }} <img src="/img/ui-icons/download-white.svg" class="chia-icon ui-icon baseline-icon"></a>
-            </div>
-            <div class="download-option-details download-option-ver">
-                <h6>Version {{ site.data.checksums.current_version }} | 64 bit</h6>
-                <span class="chia-cta">Alternative Download: <a href="https://download.chia.net/latest/x86_64-Ubuntu-gui.torrent">Torrent <img src="/img/ui-icons/download.svg" class="chia-icon ui-icon baseline-icon"></a></span>
-            </div>
-            <div class="download-option-details download-option-check">
-                <h6>SHA256 checksum:</h6>
-                <span><code>{{ site.data.checksums.x86_ubuntu_debian_checksum }}</code></span>
-            </div>
-        </div>
-
-        <!-- ARM Debian download -->
-        <div class="download-option">
-            <div class="download-option-details download-option-button">
-                <a href="https://download.chia.net/latest/ARM64-Ubuntu-gui" target="_blank" rel="noreferrer noopener" class="button full-width-button">{{ strings.download_debianarm_button }} <img src="/img/ui-icons/download-white.svg" class="chia-icon ui-icon baseline-icon"></a>
-            </div>
-            <div class="download-option-details download-option-ver">
-                <h6>Version {{ site.data.checksums.current_version }} | 64 bit</h6>
-                <span class="chia-cta">Alternative Download: <a href="https://download.chia.net/latest/ARM64-Ubuntu-gui.torrent">Torrent <img src="/img/ui-icons/download.svg" class="chia-icon ui-icon baseline-icon"></a></span>
-            </div>
-            <div class="download-option-details download-option-check">
-                <h6>SHA256 checksum:</h6>
-                <span><code>{{ site.data.checksums.arm64_ubuntu_debian_checksum }}</code></span>
-            </div>
-        </div>
-
-        <!-- CentOS/Redhat download -->
-        <div class="download-option">
-            <div class="download-option-details download-option-button">
-                <a href="https://download.chia.net/latest/x86_64-Redhat-gui" target="_blank" rel="noreferrer noopener" class="button full-width-button">{{ strings.download_centosfedora_button }} <img src="/img/ui-icons/download-white.svg" class="chia-icon ui-icon baseline-icon"></a>
-            </div>
-            <div class="download-option-details download-option-ver">
-                <h6>Version {{ site.data.checksums.current_version }} | 64 bit</h6>
-                <span class="chia-cta">Alternative Download: <a href="https://download.chia.net/latest/x86_64-Redhat-gui.torrent">Torrent <img src="/img/ui-icons/download.svg" class="chia-icon ui-icon baseline-icon"></a></span>
-            </div>
-            <div class="download-option-details download-option-check">
-                <h6>SHA256 checksum:</h6>
-                <span><code>{{ site.data.checksums.x86_centos_redhat_checksum }}</code></span>
-            </div>
-        </div>
-
-        <div class="download-option verify-check">
-            <p class="chia-cta"><a href="/download/verify_checksum">How to Verify Checksum <img src="/img/ui-icons/arrow-right.svg" class="chia-icon ui-icon"></a></p>
+        <div class="digihand-shot">
+            <img src="/img/documentation/item1_full_page.png" alt="side-by-side review layout">
         </div>
     </div>
 </div>
 
 <div class="white-bg content-padding">
     <div class="col-8-container">
-        <div class="download-extras">
-            <div class="download-extra-option soft-shadow">
-                <h3>Other Platforms</h3>
-                <p>Python 3.7 or newer is required.</p>
-                <ul>
-                    <li><a href="https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi" target="_blank">Raspberry Pi 4</a></li>
-                    <li><a href="https://github.com/orgs/Chia-Network/packages/container/package/chia" target="_blank">Docker</a></li>
-                    <li><a href="https://github.com/Chia-Network/chia-blockchain/wiki/FreeBSD-Install" target="_blank">FreeBSD</a></li>
-                    <li><a href="https://github.com/Chia-Network/chia-blockchain/wiki/Ubuntu-Binary-Install" target="_blank">Ubuntu Binary</a></li>
-                    <li><a href="https://github.com/Chia-Network/chia-blockchain/wiki/OpenBSD-Install" target="_blank">OpenBSD</a></li>
-                </ul>
-            </div>
+        <h2>Workflow:</h2>
 
-            <div class="download-extra-option soft-shadow">
-                <h3>Latest Dev</h3>
-                <p><em>Note: Dev builds are built on every merge to main and may contain bugs or other issues that are not present in tagged releases</em></p>
-                <ul>
-                    <li><a href="https://download.chia.net/latest-dev/ChiaSetup-latest-dev.exe" target="_blank"> Windows </a></li>
-                    <li><a href="https://download.chia.net/latest-dev/Chia_latest_dev.dmg" target="_blank"> macOS Intel </a></li>
-                    <li><a href="https://download.chia.net/latest-dev/Chia-arm64_latest_dev.dmg" target="_blank"> macOS M1 </a></li>
-                    <li><a href="https://download.chia.net/latest-dev/chia-blockchain_amd64_latest_dev.deb" target="_blank"> Ubuntu/Debian </a></li>
-                    <li><a href="https://download.chia.net/latest-dev/chia-blockchain_arm64_latest_dev.deb" target="_blank"> Ubuntu/Debian ARM </a></li>
-                    <li><a href="https://download.chia.net/latest-dev/chia-blockchain-1.x86_64_latest_dev.rpm" target="_blank"> CentOS/Redhat </a></li>
-                </ul>
-            </div>
+        <h3>1. Open your source PDF</h3>
+        <p>
+            Click <strong>Open source file...</strong> and choose the scanned PDF.
+        </p>
 
+        <div class="digihand-shot">
+            <img src="/img/documentation/item2_file_menu.png" alt="opening the source PDF">
+        </div>
+
+        <h3>2. Pick the model and start page</h3>
+        <p>
+            In the <em>Tools</em> toolbar, choose between the transcription models: Florence, Moondream, Qwen2.5, or Qwen3.5. The small number next to is where you can change the <strong>start page</strong> in case some pages have already been digitzed.
+        </p>
+
+        <div class="digihand-shot">
+            <img src="/img/documentation/item4_model.png" alt="opening the source PDF">
+            <div class="shot-figure">Model picker, starting page, Solve, and To ePub.</div>
+        </div>
+
+        <h3>3. Choose where the text goes</h3>
+        <p>
+            Enter an existing folder or type a new folder name.
+        </p>
+
+        <div class="digihand-shot">
+            <img src="/img/documentation/item5_output_folder.png" alt="opening the source PDF">
+        </div>
+
+        <h3>4. Solve</h3>
+        <p>
+            Press <strong>Solve</strong>. Each page is saved as <code>page_0.txt</code>, <code>page_1.txt</code>, … in the output folder.
+        </p>
+
+        <div class="digihand-shot">
+            <img src="/img/documentation/item6_solver.png" alt="opening the source PDF">
+        </div>
+
+        <h3>5. Review each page</h3>
+        <p>
+            When the solver finishes, scroll through the PDF and use the synchronized text editor. Your edits save automatically when you switch pages.
+        </p>
+
+        <div class="digihand-shot">
+            <img src="/img/documentation/item7_review.png" alt="opening the source PDF">
         </div>
     </div>
 </div>
 
-<div class="white-bg content-padding release-notes-options">
+<div class="white-bg content-padding">
     <div class="col-8-container">
-        <h2>{{ strings.download_title }}</h2>
-        <div id="releases-box" class="release-notes-grid">{{ strings.download_loading_message }}</div>
+        <h2>Reviewing tools</h2>
+
+        <h3>PDF Viewer toolbar</h3>
+        <ul>
+            <img src="/img/documentation/item8_pdf_features.png" alt="opening the source PDF">
+            <li>First page, Previous page, Next page, Last page, Custom Page Input.</li>
+            <li>Zoom-in, Zoom-out, Fit-to-window, Original View.</li>
+            <li>Rotate left, Rotate right:
+        </ul>
+
+        <h3>Text Editor toolbar</h3>
+        <ul>
+            <img src="/img/documentation/item9_text_features.png" alt="opening the source PDF">
+            <li>Word wrap, Font, Font size, Formatting</li>
+            <li>Bold, Italic, Underline</li>
+        </ul>
+
+
+
+        <table class="digihand-keys">
+            <tr><th>Shortcut</th><th>Action</th></tr>
+            <tr><td><code>Ctrl+B</code></td><td>Bold (in the text editor)</td></tr>
+            <tr><td><code>Ctrl+I</code></td><td>Italic</td></tr>
+            <tr><td><code>Ctrl+U</code></td><td>Underline</td></tr>
+            <tr><td><code>Ctrl+Shift+N</code></td><td>New project</td></tr>
+            <tr><td><code>Ctrl+Shift+O</code></td><td>Open project</td></tr>
+            <tr><td><code>Ctrl+Shift+S</code></td><td>Save project</td></tr>
+        </table>
     </div>
 </div>
 
-<script type="text/javascript">
-fetch("https://api.github.com/repos/Chia-Network/chia-blockchain/releases").then(function(response) { return response.json(); }).then(function(jsonResult) {
-    document.getElementById("releases-box").innerHTML = jsonResult.map(function(release) {
-        var title = "Chia Blockchain " + release.name;
-        var date = new Date(release.published_at).toLocaleDateString('en-US', {year: "numeric", month: "long", day: "numeric"});
-        return (
-            '<div class="release">' +
-                '<a href="' + release.html_url + '" target="_blank" rel="noreferrer noopener">' + title + '</a>' +
-                '<div class="order-md-first float-md-right release-date">' + date + '</div>' +
-            '</div>'
-        )
-    }).join('\n');
-});
-</script>
+<div class="white-bg content-padding">
+    <div class="col-8-container">
+        <h2>Publish as an ePub</h2>
+        <p>
+            When finished reviewing, press the book-shaped <strong>ePub</strong> button. It then opens the ePub options window:
+        </p>
+        <ul>
+            <li><strong>Chapter rule</strong> — split chapters by <em>dates</em> (journal style: any date on its own line starts a chapter), by <em>keyword</em> (any line containing e.g. <code>Ch:</code>), or <em>both</em>.</li>
+            <li><strong>Chapter name</strong> — a template like <code>Chapter {n}: {heading}</code>; leave blank to use the heading line itself.</li>
+            <li><strong>Split multi-date files</strong> — when one text file contains several dates, each date becomes its own chapter.</li>
+            <li><strong>Book metadata</strong> — title, author, description, publisher, language, subjects, and an optional cover image.</li>
+            <li><strong>Front matter</strong> — optional foreword and credits pages</li>
+        </ul>
+        <p>
+            Press <strong>Create ePub</strong>. The book is written next to your text files, and the status bar reports the ePub path plus a chapter log you can check.
+        </p>
+
+        <div class="digihand-shot">
+            <img src="/img/documentation/item10_epub.png" alt="opening the source PDF">
+        </div>
+    </div>
+</div>
+
+<div class="white-bg content-padding">
+    <div class="col-8-container">
+        <h2>Data Persistence</h2>
+        <p>
+            A DigiHand project remembers everything about a book-in-progress: the source PDF, the output folder, the chosen model, the start and current page, your window layout, your ePub options, and the epubs you generated.
+        </p>
+        <ul>
+            <li><strong>File ▸ Save Project</strong> (<code>Ctrl+Shift+S</code>) saves a <code>.digihand.json</code> beside your work; afterwards DigiHand autosaves it when you close.</li>
+            <li><strong>File ▸ Open Project...</strong> (<code>Ctrl+Shift+O</code>) or <strong>Open Recent</strong> reopens your past session.</li>
+            <li><strong>File ▸ New Project</strong> (<code>Ctrl+Shift+N</code>) clears the session for the next book.</li>
+        </ul>
+
+        <div class="digihand-shot">
+            <img src="/img/documentation/item11_data_persistence.png" alt="opening the source PDF">
+        </div>
+    </div>
+</div>
+
+<div class="white-bg content-padding">
+    <div class="col-8-container">
+        <h2>Tips &amp; troubleshooting</h2>
+        <ul>
+            <li><strong>First solve of a model is slow:</strong> the model weights download once, then everything is local and offline.</li>
+            <li><strong>Resuming a book:</strong> set the start page number and press Solve again.</li>
+            <li><strong>Epubs missing on disk after moving folders: </strong> the project will load and tells you how many epubs it can't find.</li>
+        </ul>
+    </div>
+</div>
