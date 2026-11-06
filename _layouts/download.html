@@ -24,6 +24,47 @@ layout: default
 .digihand-keys { border-collapse: collapse; }
 .digihand-keys td, .digihand-keys th { border: 1px solid #ddd; padding: 6px 12px; text-align: left; }
 .digihand-keys code { background: #f2f2f2; padding: 1px 6px; border-radius: 4px; }
+
+/* Section rhythm: the stock .content-padding puts 88px of bottom padding
+   against 88px of top padding, which reads as a large empty gap between
+   blocks. These blocks keep the same horizontal page margins, but sections
+   now share a single 44px gap instead of doubling the padding. */
+.doc-block {
+    padding: 44px 3.125% 0;
+}
+@media (min-width: 992px) {
+    .doc-block { padding: 44px 24px 0; }
+}
+.doc-hero { padding-top: 88px; }
+.doc-block-end { padding-bottom: 44px; }
+
+/* "Documentation" section title: sized up to the page's h1 scale so it reads
+   as a section divider rather than another list heading. */
+.doc-title {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 42px;
+    line-height: 48px;
+    letter-spacing: 0.02em;
+}
+
+/* Section headings inside the documentation body ("The DigiHand window",
+   "Workflow:", …) step down from the theme's 36px h2 so the 42px
+   "Documentation" title stays the dominant heading on the page. */
+.doc-block h2:not(.doc-title) {
+    font-size: 28px;
+    line-height: 36px;
+}
+
+@media (max-width: 991px) {
+    .doc-block { padding: 28px 3.125% 0; }
+    .doc-hero { padding-top: 32px; }
+    .doc-block-end { padding-bottom: 28px; }
+}
+@media (max-width: 767px) {
+    .doc-title { font-size: 30px; line-height: 38px; }
+    .doc-block h2:not(.doc-title) { font-size: 22px; line-height: 30px; }
+}
 </style>
 
 <div class="pg-title">
@@ -32,7 +73,7 @@ layout: default
     </div>
 </div>
 
-<div class="white-bg content-padding">
+<div class="white-bg doc-block doc-hero">
     <div class="col-6-container">
         <h3>AI-powered handwriting digitization platform, written in Python.</h3>
         <p>
@@ -44,7 +85,13 @@ layout: default
     </div>
 </div>
 
-<div class="white-bg content-padding">
+<div class="white-bg doc-block">
+    <div class="col-8-container">
+        <h2 class="doc-title">Documentation</h2>
+    </div>
+</div>
+
+<div class="white-bg doc-block">
     <div class="col-8-container">
         <h2>The DigiHand window</h2>
         <ul>
@@ -59,7 +106,7 @@ layout: default
     </div>
 </div>
 
-<div class="white-bg content-padding">
+<div class="white-bg doc-block">
     <div class="col-8-container">
         <h2>Workflow:</h2>
 
@@ -111,7 +158,7 @@ layout: default
     </div>
 </div>
 
-<div class="white-bg content-padding">
+<div class="white-bg doc-block">
     <div class="col-8-container">
         <h2>Reviewing tools</h2>
 
@@ -144,7 +191,7 @@ layout: default
     </div>
 </div>
 
-<div class="white-bg content-padding">
+<div class="white-bg doc-block">
     <div class="col-8-container">
         <h2>Publish as an ePub</h2>
         <p>
@@ -167,7 +214,7 @@ layout: default
     </div>
 </div>
 
-<div class="white-bg content-padding">
+<div class="white-bg doc-block">
     <div class="col-8-container">
         <h2>Data Persistence</h2>
         <p>
@@ -185,7 +232,7 @@ layout: default
     </div>
 </div>
 
-<div class="white-bg content-padding">
+<div class="white-bg doc-block doc-block-end">
     <div class="col-8-container">
         <h2>Tips &amp; troubleshooting</h2>
         <ul>
