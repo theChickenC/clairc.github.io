@@ -13,7 +13,7 @@ author: "[Clair C.](https://www.clairc.com/)"
 * looking at the gemstone for too long will stun you bc it's supposedly the most enchanting obj you've ever seen (rainbow glimmering)
 * as a molter, not only are you surviving against traps on the gemstone, but also other people trying to beat you
 
-<p align="center"><img src="/assets/blog/26_5_21.jpg" alt="Chia Blockchain datalayer graphic" width="300px"></p>
+<p align="center"><img src="/assets/blog/26_5_21.jpg" alt="26_5_21" width="300px"></p>
 
 ## Possible Plot #1
 
