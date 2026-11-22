@@ -17,7 +17,7 @@
     }
     @include breakpoint(460) {
         background-position: -(rem(257)) 0;
-        padding: rem(60)  3.125%  rem(10)  3.125%;
+        padding: rem(60)  3.125%  rem(30)  3.125%;
         // padding: top right bottom left
     }
     @include breakpoint(900) {
@@ -33,27 +33,34 @@
 --------------------------------------------------------------*/
 
 .footer-content-container {
-    @include breakpoint(460) {
-        margin-left: rem(100);
-    }
-    @include breakpoint(768) {
-        margin-left: 15%;
-    }
-    @include breakpoint(900) {
-        margin-left: 20%;
-        margin-right: 8.4722%;
-    }
-    @include breakpoint(1200) {
-        margin-left: 33.89%;
+    // logo/copyright stack on the left, link columns beside it,
+    // the whole group kept tight and centered in the band
+    @include breakpoint(576) {
+        display: flex;
+        align-items: flex-start;
+        gap: rem(70);
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 /*--------------------------------------------------------------
-# Logo
+# Brand stack (logo with copyright beneath, left of the columns)
 --------------------------------------------------------------*/
 
-.footer-logo {
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
     margin-bottom: rem(36);
+    @include breakpoint(576) {
+        margin-bottom: 0;
+    }
+}
+
+.footer-logo {
+    margin-bottom: 0;
 }
 
 // .footer-logo img { 
@@ -72,7 +79,10 @@
     // grid-template-rows: 1fr 1fr;
     grid-template-rows: 1fr;
     @include breakpoint(576) {
-        grid-template-columns: 1fr 1fr 1fr;
+        // columns sit close together, left-packed, rather than
+        // stretched across the whole footer width
+        grid-template-columns: repeat(3, max-content);
+        column-gap: rem(90);
     }
 }
 
@@ -99,4 +109,29 @@
 .social-icon {
     max-width: 24px;
     margin-right: 0.5rem;
+}
+
+// keep each social row on one line with the icon vertically
+// centered against its label (plain inline flow let labels wrap
+// under the icons in the shrink-to-fit grid)
+.social-links {
+    li {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        white-space: nowrap;
+    }
+    .social-icon {
+        flex: none;
+        margin-right: 0;
+    }
+}
+
+/*--------------------------------------------------------------
+# Copyright
+--------------------------------------------------------------*/
+.footer-copyright {
+    p {
+        margin: 0;
+    }
 }
