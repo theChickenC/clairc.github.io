@@ -35,8 +35,13 @@ layout: default
 @media (min-width: 992px) {
     .doc-block { padding: 44px 24px 0; }
 }
-.doc-hero { padding-top: 88px; }
 .doc-block-end { padding-bottom: 44px; }
+
+/* The band's own padding supplies the gap below the last block; the mid-page
+   gradient banner needs a gap above it (doc blocks end with 0 bottom padding). */
+.light-bg { padding-top: 0; }
+.light-bg > .doc-block.doc-block-end { padding-bottom: 0; }
+.doc-gradient-band { margin-top: 44px; }
 
 /* "Documentation" section title: sized up to the page's h1 scale so it reads
    as a section divider rather than another list heading. */
@@ -58,7 +63,6 @@ layout: default
 
 @media (max-width: 991px) {
     .doc-block { padding: 28px 3.125% 0; }
-    .doc-hero { padding-top: 32px; }
     .doc-block-end { padding-bottom: 28px; }
 }
 @media (max-width: 767px) {
@@ -73,7 +77,8 @@ layout: default
     </div>
 </div>
 
-<div class="white-bg doc-block doc-hero">
+<div class="light-bg">
+<div class="white-bg doc-block">
     <div class="col-6-container">
         <h3>AI-powered handwriting digitization platform, written in Python.</h3>
         <p>
@@ -85,7 +90,7 @@ layout: default
     </div>
 </div>
 
-<div class="white-bg doc-block">
+<div class="pg-title doc-gradient-band">
     <div class="col-8-container">
         <h2 class="doc-title">Documentation</h2>
     </div>
@@ -241,4 +246,5 @@ layout: default
             <li><strong>Epubs missing on disk after moving folders: </strong> the project will load and tells you how many epubs it can't find.</li>
         </ul>
     </div>
+</div>
 </div>
