@@ -17,8 +17,10 @@
 
 .post {
     flex-direction: column;
-    border: 1px solid $gray;
+    background-color: $pink-card;
+    border: 1px solid rgba($accent-2, 0.3);
     border-radius: rem(8);
+    box-shadow: 0 6px 18px rgba($text-color, 0.07);
     margin-bottom: rem(24);
     padding: rem(24) 24 / 464 * 100% rem(24);
     .date {

@@ -81,8 +81,9 @@ p {
 
 blockquote {
 	@include typeset($resonsive-lrg-font-size, $responsive-lrg-line-height);
-	background-color: $pastel-green;
-	border-left: rem(4) solid $dark-green;
+	background-color: darken($panel, 4%); // quote box tinted one step deeper than the card
+	color: $on-dark;
+	border-left: rem(4) solid $accent-2;
 	margin: rem(36) 0;
 	padding: rem(24);
 	p {
@@ -163,8 +164,9 @@ dd {
 
 table {
 	@include typeset($responsive-body-font-size, 21);
-	background-color: $white;
-	border: rem(4) solid $dark-green;
+	background-color: $panel;
+	color: $on-dark;
+	border: rem(4) solid rgba($on-dark, 0.2);
 	margin: rem($body-line-height) 0;
 	width: 100%;
 	@include breakpoint(768) {
@@ -182,11 +184,11 @@ caption {
 }
 
 tbody tr:nth-of-type(odd) {
-	background-color: $pastel-green;
+	background-color: rgba($on-dark, 0.06); // subtle zebra on dark tables
 }
 
 th {
-	border-left: rem(2) solid $dark-green;
+	border-left: rem(2) solid rgba($on-dark, 0.25);
 	font-weight: 700;
 	padding: rem(12) rem(15);
 	text-align: left;
@@ -194,8 +196,8 @@ th {
 }
 
 td {
-	border-left: rem(2) solid $dark-green;
-	border-top: rem(2) solid $dark-green;
+	border-left: rem(2) solid rgba($on-dark, 0.25);
+	border-top: rem(2) solid rgba($on-dark, 0.25);
 	padding: rem(12) rem(15);
 	text-align: left;
 	vertical-align: top;
@@ -210,7 +212,7 @@ td:nth-of-type(1) {
 # Code
 --------------------------------------------------------------*/
 code {
-	background-color: $pastel-green;
+	background-color: rgba($accent, 0.07);
 	border-radius: 2px;
 	color: $code-color;
 	font-family: $font-family-mono;
@@ -221,7 +223,7 @@ code {
 # Preformatted Text
 --------------------------------------------------------------*/
 pre {
-	background-color: $pastel-green;
+	background-color: rgba($accent, 0.07);
 	border-radius: 8px;
 	line-height: 1.6025;
 	margin: rem($body-line-height) 0;

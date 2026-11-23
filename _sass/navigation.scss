@@ -3,9 +3,7 @@
 --------------------------------------------------------------*/
 
 .main-header {
-    @include grid-width($col-12-width);
-    @include center-block;
-    background-color: $white;
+    background-color: $page-bg; // full-width band so the color reaches both screen edges
     padding: rem(16) 0 0;
     @include breakpoint(992) {
         padding-bottom: rem(16);
@@ -13,6 +11,8 @@
 }
 
 .main-menu {
+    @include grid-width($col-12-width); // content stays at the usual 1440px measure
+    @include center-block;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@
 .main-menu-links {
     @include typeset($responsive-body-font-size, 21);
     @include reset-list;
-    background-color: $dark-green;
+    background-color: $ink;
     display: none;
     width: 100%;
     @include breakpoint(768) {
@@ -78,14 +78,14 @@
                 color: $link-color;
             }
             @include breakpoint(992) {
-                color: $dark-green;
+                color: $text-color;
                 padding: rem(12) 0;
                 &:visited {
-                    color: $dark-green;
+                    color: $text-color;
                 }
                 &:hover, &:active {
                     background-color: transparent;
-                    color: $chia-green;
+                    color: $accent;
                 }
             }
         }
@@ -124,7 +124,7 @@
         display: none;
     }
     span {
-        background-color: $dark-green;
+        background-color: $text-color;
         border-radius: rem(2);
         display: block;
         height: rem(3);

@@ -2,8 +2,17 @@
 # Background Colors
 --------------------------------------------------------------*/
 
+// light page with two faint accent tints (theme-driven); content boxes stay dark
+body {
+	background-color: $page-bg;
+	background-image:
+		radial-gradient(ellipse at 12% 0%, rgba($accent, 0.10), transparent 55%),
+		radial-gradient(ellipse at 88% 12%, rgba($accent-2, 0.13), transparent 50%);
+	background-attachment: fixed;
+}
+
 .light-bg {
-	background-color: $pastel-green;
+	background-color: $tint;
 	padding: rem(24) 0;
 	@include breakpoint(992) {
 		padding: rem(88) rem(24);
@@ -11,7 +20,17 @@
 }
 
 .white-bg {
-	background-color: $white;
+	background-color: $panel;
+	color: $on-dark;
+	a, a:visited {
+		color: $link-on-card;
+	}
+	a:hover, a:active {
+		color: $hover-on-card;
+	}
+	// light cards on a light page need shadow + faint edge to separate
+	box-shadow: 0 14px 40px rgba($text-color, 0.10);
+	border: 1px solid rgba($accent-2, 0.22);
 }
 
 /*--------------------------------------------------------------
@@ -75,8 +94,10 @@
 --------------------------------------------------------------*/
 
 .pg-title {
-	background: linear-gradient(to right bottom, $chia-green, $bright-green);
-	color: $white;
+	// pastel banner: gradient + dark title text for a soft, youthful band that still pops
+	// stops routed through light tints so green+pink never mix into mud
+	background: linear-gradient(100deg, $banner1 0%, mix($banner1, $white, 45%) 22%, mix($banner2, $white, 35%) 55%, mix($banner2, $white, 12%) 78%, $banner2 100%);
+	color: $banner-text;
 	padding: rem(24) 24 / 1440 * 100%;
 	text-align: center;
 	h1 {
@@ -129,13 +150,18 @@
 .featured-content {
 	display: flex;
 	flex-direction: column;
+	background-color: $white;   // one uniform card: text and photo share a panel
 	@include breakpoint(768) {
 		flex-direction: row;
 	}
 }
 
 .featured-content-txt-container {
-	background-color: $white;
+	background-color: transparent;
+	color: #4A2233;            // bio text: deep plum (was near-black green)
+	display: flex;
+	align-items: center;        // text centers against the photo height, no pink void
+
 	@include breakpoint(768) {
 		width: 732 / $col-10-width * 100%;
 	}
@@ -192,7 +218,7 @@
 		}
 	}
 	.featured-content-img {
-		background-color: $white;
+		background-color: $panel;
 		@include breakpoint(768) {
 			width: 50%;
 			padding: rem(20);

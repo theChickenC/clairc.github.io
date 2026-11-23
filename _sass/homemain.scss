@@ -5,7 +5,7 @@
 
 .homepad {
     margin-top: rem(150);
-    background-color: $navy;
+    background-color: $band;
     // background-image: url(/img/home/cuckoo_maran_adult_photo.png);
     background-position: 50%;
     background-repeat: no-repeat;
@@ -79,12 +79,31 @@
 --------------------------------------------------------------*/
 
 .superhero {
-    background-color: $dark-green;
-    // background-image: url(/img/home/cuckoo_maran_adult_photo.png);
+    background-color: $pink-card;   // sakura pink like the other cards (was a dark slab)
     background-position: 50%;
     background-repeat: repeat;
     background-size: rem(200) rem(200);
-    color: $white;
+    color: $on-dark;
+    // outline-white buttons vanish on a light hero: solid green pop instead
+    .button {
+        background-color: $primary-button-color;
+        border-color: $primary-button-color;
+        color: $primary-button-text-color;
+        &:hover {
+            background-color: $primary-button-color-hover;
+            border-color: $primary-button-color-hover;
+        }
+    }
+    .slick-dots {
+        li button:before {
+            background-color: $on-dark;
+            border-color: $on-dark;
+        }
+        li:hover button:before,
+        .slick-active button:before {
+            background-color: transparent;
+        }
+    }
 }
 
 
@@ -202,6 +221,7 @@
 --------------------------------------------------------------*/
 
 .value-prop {
+    background-color: $pink-card;
     border-radius: rem(8);
     margin-bottom: rem(24);
     padding: rem(24) 24 / 586 * 100% rem(24);

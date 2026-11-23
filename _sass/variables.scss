@@ -2,29 +2,94 @@
 $black: #000;
 $white: #FFF;
 
-// Project Color Values
-$chia-green: #3AAC59;
-$bright-green: #96C93D;
-$pastel-green: #EFFDF0;
-$dark-green: #3C4A3E;
-$gray: #DDD;
-$dark-gray: #727272;
+// -----------------------------------------------------------
+// THEME SWITCH — edit this one line to flip the whole site:
 
-//temp
-$navy: #05054c;
+//   plum     = purple-pink: orchid accent, deep plum cards
+//   blossom  = cherry blossom pinks over fresh field greens
+$theme: blossom;
+
+$themes: (
+	plum: (
+		page: #FDF3F9,          // page background (whisper-pink)
+		card: #F7E7F3,          // cards and raised surfaces (soft orchid-pink)
+		band: #5C3A68,          // footer band (soft plum, not black)
+		on-light: #43274C,      // dark text on light surfaces
+		on-dark: #43274C,       // text inside cards (now light boxes, so dark text)
+		accent: #A53FB8,        // orchid (between purple and pink)
+		accent2: #F06FAE,       // bubblegum pink (gradient partner)
+		pastel: #F4E7F6,
+		dark: #6E4679,          // mobile menu / hero band (medium orchid)
+		gray: #E4D3EA,
+		gray-dark: #8A7593,
+		text: #43274C,
+		text-light: #7A6883,
+		banner1: #F29CD2,       // banner gradient: bubblegum pink ...
+		banner2: #C78BE8,       // ... into soft orchid
+		banner-text: #3E1F4A,   // deep plum on the pastel banner
+		link-card: #932FA6,     // links inside soft cards (a touch deeper than the accent)
+		pink-card: #F0D6EC,
+		link-hover: #7F2E8F,
+		hover-card: #6C2279,
+		button: #A53FB8
+	),
+	blossom: (
+		page: #DFEAD0,          // page background: Japanese spring green (hued enough to differ from the off-white bands)
+		card: #FAFCF5,          // panels/raised surfaces: off-white (not pink)
+		pink-card: #FCE3EC,     // item cards (blog posts, value props): sakura pink
+		band: #8A4563,          // footer band (plum)
+		on-light: #24331F,      // near-black green text (reads neutral, isn't plum)
+		on-dark: #24331F,
+		accent: #C9436E,        // cherry blossom pink (still the main color)
+		accent2: #7FA83F,       // spring green pop
+		pastel: #FAFCF5,        // .light-bg section bands + quote/table tints: off-white, not pink
+		dark: #B25E80,          // mobile menu / hero band (rose)
+		gray: #EBCAD6,
+		gray-dark: #6F7D5F,
+		text: #24331F,
+		text-light: #5F7355,
+		banner1: #93C766,       // banner gradient: young-leaf green (spring) ...
+		banner2: #E2709A,       // ... into blossom pink
+		banner-text: #2A4425,   // deep green on the pastel banner
+		link-card: #B93A63,     // links inside soft cards (pink)
+		link-hover: #46702E,    // links go spring green on hover
+		hover-card: #46702E,
+		button: #4E7A33         // solid buttons (Download etc.): fresh green pop
+	)
+);
+
+$t: map-get($themes, $theme);
+
+$page-bg: map-get($t, page);
+$panel: map-get($t, card);
+$band: map-get($t, band);
+$on-white: map-get($t, on-light);
+$on-dark: map-get($t, on-dark);
+$accent: map-get($t, accent);
+$accent-2: map-get($t, accent2);
+$tint: map-get($t, pastel);
+$ink: map-get($t, dark);
+$gray: map-get($t, gray);
+$dark-gray: map-get($t, gray-dark);
+$banner1: map-get($t, banner1);
+$banner2: map-get($t, banner2);
+$banner-text: map-get($t, banner-text);
+$link-on-card: map-get($t, link-card);
+$hover-on-card: map-get($t, hover-card);
+$pink-card: map-get($t, pink-card);
 
 // Text Colors
-$text-color: $dark-green;
-$light-text-color: lighten($text-color, 15%);
+$text-color: map-get($t, text);
+$light-text-color: map-get($t, text-light);
 $code-color: $text-color;
 
 // Link Colors
-$link-color: $chia-green;
-$link-color-hover: $text-color;
+$link-color: $accent;
+$link-color-hover: map-get($t, link-hover);
 
 // Button Colors
-$primary-button-color: $link-color;
-$primary-button-color-hover: lighten($link-color, 8%);
+$primary-button-color: map-get($t, button);
+$primary-button-color-hover: lighten(map-get($t, button), 8%);
 $primary-button-text-color: $white;
 $primary-button-text-color-hover: $white;
 
