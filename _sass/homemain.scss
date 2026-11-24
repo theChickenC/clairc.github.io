@@ -79,7 +79,7 @@
 --------------------------------------------------------------*/
 
 .superhero {
-    background-color: $pink-card;   // sakura pink like the other cards (was a dark slab)
+    background-color: $item-card;   // young matcha, one shade deeper than the panels
     background-position: 50%;
     background-repeat: repeat;
     background-size: rem(200) rem(200);
@@ -221,7 +221,7 @@
 --------------------------------------------------------------*/
 
 .value-prop {
-    background-color: $pink-card;
+    background-color: $item-card;
     border-radius: rem(8);
     margin-bottom: rem(24);
     padding: rem(24) 24 / 586 * 100% rem(24);

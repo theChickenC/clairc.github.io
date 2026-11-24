@@ -17,8 +17,8 @@
 
 .post {
     flex-direction: column;
-    background-color: $pink-card;
-    border: 1px solid rgba($accent-2, 0.3);
+    background-color: $item-card;
+    border: 1px solid rgba($accent, 0.3);   
     border-radius: rem(8);
     box-shadow: 0 6px 18px rgba($text-color, 0.07);
     margin-bottom: rem(24);
